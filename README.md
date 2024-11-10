@@ -1,6 +1,6 @@
 Project#3 for CS5393-002
 
-Jocelin Macias, CS5393-002_Project3, Collaborator: Naomi Murrieta and Xitlali Lopez
+Jocelin Macias, CS5393-002_Project3, Collaborator: Naomi Murrieta and Xitlali Lopez and Antonio Flores
 
 My goal is to practice using Git and GitHub by programming a sentiment analysis tool to determine whether the sentiment of a tweet is positive or negative. We define a custom string type called DSString and implement a DSString class, handling memory allocation and management using the rule of three.
 
