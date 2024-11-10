@@ -70,7 +70,7 @@ void analysisT::training(DSString fileName) {
         }
     }
 
-    //iterating through the map
+
     for(pair<DSString,pair<int, int>> itr : sentCount) {
         int total = itr.second.first+itr.second.second;
         //5-50 of times a apperitence a word to then use
@@ -100,8 +100,7 @@ void analysisT::testing(DSString fileName) {
     //creating a c-string buffer
     char* buffer = new char[1000];
 
-    //discard header for file by reading in header
-    //reading until 1000 char or until \n
+   
     input.getline(buffer,1000);
 
     //parsing the file
@@ -122,14 +121,14 @@ void analysisT::testing(DSString fileName) {
         //reading our text tweet
         input.getline(buffer,1000);
 
-        //our delimiters by using special characters
+       
         char* token = strtok(buffer,"!,@#$%^&*()_+/-|{}[];:\"'?~.<> 1234567890\\");
 
-        //
+        
         int netural = 0;
 
         while(token != nullptr) {
-            //calling DDString and making a deep copy
+            
             DSString word = token;
             //in case there are two special characters next to each other
             if(word.length() > 2) {
@@ -148,7 +147,7 @@ void analysisT::testing(DSString fileName) {
             }
             token = strtok(nullptr,"!,@#$%^&*()_+/-|{}[];:\"'?~.<> 1234567890\\");
         }
-        //if the sentiment of the word is equal to zero it turns positive
+        
         sentValueS[id] = netural >= 0;
     }
 
