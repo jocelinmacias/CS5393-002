@@ -9,3 +9,37 @@ Used free extension: [ ] 24 hrs or [ ] 48 hrs
 [X] Bonus work. Describe: Accuracy is 72%
 
 Place [x] for what applies.
+
+
+Answers
+
+How do you train the model and how do you classify a new tweet? Give a short description of the main steps.
+- First, the txt file containing tweets and their sentiment labels is read. Each tweet is then broken down into individual words, converted to lowercase, and 
+filtered to remove short or irrelevant words. For each word, a count is updated based on its appearance in positive or negative tweets. Finally, each word's sentiment 
+value is stored by calculating the probability of it being associated with positive sentiment.
+
+How long did your code take for training and what is the time complexity of your training implementation (Big-Oh notation)? Remember that training includes reading the tweets, breaking it into words, counting, ... Explain why you get this complexity (e.g., what does N stand for and how do your data structures/algorithms affect the complexity).
+- We spent a week developing the training section. 
+- The time complexity of our training process is O(N×M), where N represents the number of tweets and M is the average number of words per tweet. 
+- Each word is processed and updates the sentCount map, which operates in O(1) time for each word.
+
+How long did your code take for classification and what is the time complexity of your classification implementation (Big-Oh notation)? Explain why.
+- We spent a week developing the classification section. The time complexity of the classification process is O(N×M), where N is the number of tweets. 
+- During classification, each tweet is split into words, which takes O(M) time per tweet.
+
+What accuracy did your algorithm achieve on the provides training and test data?
+- My accuracy: 72%
+The TA will run your code on Linux and that accuracy value will be used to determine your grade.
+
+What were the changes that you made that improved the accuracy the most?
+- Adjusting the minimum frequency for a word to be classified as positive or negative improved accuracy. 
+-Additionally, modifying the probability threshold for a word to be categorized as positive or negative sentiment also contributed to the accuracy gains.
+
+How do you know that you use proper memory management? I.e., how do you know that you do not have a memory leak?
+- I ensured proper memory management by implementing and following the rule of three during memory allocation.
+
+What was the most challenging part of the assignment?
+- Determining where to begin and how to compare the classified words with the testing dataset was challenging. 
+- I had to carefully plan the steps needed to preprocess and align the classified words with the test data, ensuring consistency between training and testing phases. 
+- Additionally, establishing an effective comparison method required a solid understanding of both the dataset structure and the evaluation metrics to accurately measure 
+model performance and fine-tune the classification process.
