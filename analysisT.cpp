@@ -1,6 +1,3 @@
-//
-// Created by Xital on 10/31/2024.
-//
 
 #include "analysisT.h"
 
@@ -13,14 +10,13 @@ void analysisT::training(DSString fileName) {
         cout << "Error opening file" << '\n';
     }
 
-    //creating a c-string buffer
+    //c-string buffer
     char* buffer = new char[1000];
 
-    //discard header for file by reading in header
-    //reading until 1000 char or until \n
+    
     input.getline(buffer,1000);
 
-    //parsing the file
+  
     while(!input.eof()) {
         //will get line from each column until 1000 chars or until it reaches a ','
         input.getline(buffer, 1000, ',');
@@ -167,11 +163,10 @@ void analysisT::validation(DSString fileName0, DSString fileName1, DSString file
         cout << "Error opening file" << '\n';
     }
 
-    //creating a c-string buffer
+    //c-string buffer
     char* buffer = new char[1000];
 
-    //discard header for file by reading in header
-    //reading until 1000 char or until \n
+   
     input.getline(buffer,1000);
 
     //parsing the file
