@@ -1,6 +1,3 @@
-//
-// Created by Xital on 10/31/2024.
-//
 
 #ifndef ANALYSIST_H
 #define ANALYSIST_H
