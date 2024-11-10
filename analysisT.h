@@ -6,7 +6,7 @@
 #include<map>
 #include<vector>
 #include<fstream>
-#include<string.h> //for strtok()
+#include<string.h> 
 #include<utility> // to use pairs with the map
 #include <iomanip>
 using namespace std;
@@ -14,7 +14,6 @@ using namespace std;
 class analysisT {
 private:
     //training
-    //DDString is unqiue words and pairs has positive count and negative count
     map<DSString, pair<int, int>> sentCount;
     //map of sentiment values that store the sentiment value words
     map<DSString, bool> sentValueW;
