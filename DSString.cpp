@@ -2,7 +2,7 @@
 
 
 DSString::DSString() {
-    //only element in the string is the null terminator aka saying it's an empty string
+
     data = new char[1];
     data[0] = '\0';
     len = 0;
@@ -138,7 +138,6 @@ const char * DSString::c_str() const {
     return data;
 }
 
-//lets us use cout and ofstream on DSString
 std::ostream & operator<<(std::ostream &out, const DSString &str) {
     out << str.data;
     return out;
