@@ -4,20 +4,19 @@
 
 #include "DSString.h"
 
-/* TODO: This file is a start to test your DSString class. Add more tests and add code to check if the results are correct. */
 
 int main()
 {  
     DSString myString = "Hello, World!";
     std::cout << myString << "\n";
 
-    // this uses the one argument constructor in DSString and then the inherited operator=
+    // this uses the one argument constructor in DSString
     myString = "Good bye!";
     std::cout << myString << "\n";
 
     std::cout << "substr: " << myString.substring(5, 3) << "\n";
 
-    // test some operators (=, ==, [])
+    // test some operators 
     DSString a = "test";
     DSString b;
     b = a;
